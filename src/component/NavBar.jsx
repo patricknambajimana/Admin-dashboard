@@ -14,7 +14,7 @@ export default  function NavBar() {
                 <button> <Settings /></button>
                 <button> <Bell /></button>
                 <div className='flex gap-4 items-center-safe' >
-                     <h3>user email</h3>
+                     <h3>email of admin</h3>
                        <User className='bg-primary-600  rounded-3xl text-white w-10 h-10 p-2 '/>
                 </div>
                 </div>

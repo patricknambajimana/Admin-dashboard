@@ -1,7 +1,12 @@
 import React from 'react'
 import { CircleCheckBig,Package } from 'lucide-react';
+
 import { Total } from './state/Total';
+import { RecentProduct } from './RecentProduct';
+import UserList from './UserList';
+
  const Dashboard =()=> {
+   
   return (
     <div className='relative ml-80 mr-30 top-30 items-center text-center justify-between'>
         <div className='bg-primary-500 w-full rounded-2xl'>
@@ -15,9 +20,19 @@ import { Total } from './state/Total';
             </div>
         </div>
         <div className='text-left'>
-            <Total/>
+         <Total/>
+
+        </div>
+        <div className='mt-10  w-full border shadow-5 rounded-md'>
+            <h2 className='capitalize text-xl font-roboto text-left p-4'>recents added products</h2>
+             <div>
+              <RecentProduct/>
+             </div>
+        </div>
+        <div className='mt-10  w-full border shadow-1xl rounded-md'>
+          <UserList/>
         </div>
     </div>
   )
 }
-export default Dashboard
+export default Dashboard   

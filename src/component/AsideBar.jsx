@@ -2,7 +2,6 @@ import React from 'react'
 import { Package,Laptop,Users,AlignCenter,Layers,LogOut} from 'lucide-react';
 const AsideBar = () => {
 
-
   return (
     <div className="w-70 h-screen border-r border-primary-50 shadow grid grid-cols-1 md:gap-100  divide-amber-50 fixed">
         <div className="grid  gap-1 p-7">
