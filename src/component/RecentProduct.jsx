@@ -1,27 +1,28 @@
 import React from 'react'
 import { useProduct } from '.../../../hooks/useProduct';
-
 export const RecentProduct = () => {
-  const {products}=useProduct()
-   
-  
-  const getProduct = (stock) => {
-    if (stock <= 0) return "outofstock"
-    if (stock <= 5) return "low stock"
-    return "instock"
-  };
-  const OrderProduct=[...products].sort()
+const { products } = useProduct();
+ const getStatus = products.status ==="instock"?"text-green-200":""
+
 
   return (
-    <div className='flex w-70 p-5 pr-20 border border-neutral-200 rounded-md shadow-1 items-center space-x-3'>
-      {OrderProduct.map((product)=>{
-       const status = getProduct(product.stock)
 
-       return <div>
-        <h3 className="">{product.name}</h3>
-         <span>{product.category}</span>
-          <span>{new Date(product.date).toLocaleDateString()}</span>
-       </div>
-    })}</div>
+   <div className='grid grid-cols-3 gap-3 p-10 '>
+    {products.map((product)=>(
+      <>
+    <div className='border border-neutral-200  rounded-2xl p-4'>
+    <div className='flex justify-between text-left'>
+     <p className='text-2xl'>{product.name}</p>
+      
+      <span >{getStatus}</span>
+      </div>
+      <div className='grid pt-4 text-left'>
+      <h3>{product.category}</h3>
+      <p className='capitalize'>{product.date}</p>
+     </div>
+     </div>
+</>
+    ))}
+   </div>
   )
 }

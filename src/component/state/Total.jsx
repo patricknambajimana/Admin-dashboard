@@ -7,9 +7,9 @@ import { useUser } from '../../hooks/useUser';
 export const Total = () => {
  
   const { products } = useProduct();
-  const { User } = useUser(); 
+   const { user } = useUser(); 
 
-   const totalUser = User.length;
+   const totalUser = user.length;
    const totalproduct = products.length;
    const totalAssigned = products.filter(product=>product.stock>0).length;
    const totalUnassigned = products.filter(product=>product.stock<=0).length;

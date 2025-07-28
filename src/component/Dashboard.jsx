@@ -8,7 +8,7 @@ import UserList from './UserList';
  const Dashboard =()=> {
    
   return (
-    <div className='relative ml-80 mr-30 top-30 items-center text-center justify-between'>
+    <div className='absolute ml-80  top-30 items-center text-center justify-between'>
         <div className='bg-primary-500 w-full rounded-2xl'>
             <div className='flex gap-2 p-5'>
             <Package  className=' bg-primary-400  text-white rounded-md p-2  w-12 h-12'/>
@@ -24,9 +24,9 @@ import UserList from './UserList';
 
         </div>
         <div className='mt-10  w-full border shadow-5 rounded-md'>
-            <h2 className='capitalize text-xl font-roboto text-left p-4'>recents added products</h2>
+            <h2 className='capitalize text-xl font-roboto text-left p-4 border-b-1'>recents added products</h2>
              <div>
-              <RecentProduct/>
+              <RecentProduct />
              </div>
         </div>
         <div className='mt-10  w-full border shadow-1xl rounded-md'>

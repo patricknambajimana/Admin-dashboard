@@ -3,7 +3,7 @@ import { Package,Laptop,Users,AlignCenter,Layers,LogOut} from 'lucide-react';
 const AsideBar = () => {
 
   return (
-    <div className="w-70 h-screen border-r border-primary-50 shadow grid grid-cols-1 md:gap-100  divide-amber-50 fixed">
+    <div className="w-70 h-screen border-r-1 shadow-sm border-neutral-100 grid grid-cols-1 gap-80 fixed z-10">
         <div className="grid  gap-1 p-7">
             <div className='flex uppercase gap-3'>
                  <Package  className=' bg-primary-500  text-white rounded-md p-2  w-12 h-12'/>
@@ -24,7 +24,7 @@ const AsideBar = () => {
        </div>
         </div>
         <div>
-            <button>  <LogOut />logout</button>
+            <button className='ml-10 flex text-2xl gap-3 capitalize'>  <LogOut  className='size-8'/>logout</button>
         </div>
     </div>
   )
