@@ -4,11 +4,11 @@ import { useState } from "react";
 
 export const UserProvider=({children})=>{
       const[user,setUser]= useState([ 
-       {email:'patricknambajimana@gmail.com',username: 'Alice',role:'admin' },
-       { email:'jhondoe@gmail.com', username: 'jhon',role:'user' },
-       { email:'aalice@gmail.com', name: 'Charlie',role:'user' },
-        {email:'jhondoe@gmail.com', username: 'jhon',role:'user' },
-         {email:'jhondoe@gmail.com', username: 'jhon',role:'user' },
+       {email:'patricknambajimana@gmail.com',username: 'patrick nambajimana',role:'admin',status:"active" },
+       { email:'jhondoe@gmail.com', username: 'jhon habakuki',role:'manager',status:"active" },
+       { email:'aalice@gmail.com', username: 'Charlie jean',role:'staff',status:"active" },
+        {email:'jhondoe@gmail.com', username: 'hon mariy',role:'staff' ,status:"inactive"},
+         {email:'jhondoe@gmail.com', username: 'jhon tramba',role:'staff' ,status:"active"},
            
     ]);
     return(

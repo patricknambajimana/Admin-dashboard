@@ -23,15 +23,22 @@ import UserList from './UserList';
          <Total/>
 
         </div>
-        <div className='mt-10  w-full border shadow-5 rounded-md'>
-            <h2 className='capitalize text-xl font-roboto text-left p-4 border-b-1'>recents added products</h2>
+        <div className='mt-10  w-full border border-neutral-200 shadow-1 rounded-md'>
+            <h2 className='capitalize text-xl font-roboto text-left p-4 border-1 border-neutral-200 shadow-1xl'>recents added products</h2>
              <div>
               <RecentProduct />
              </div>
         </div>
-        <div className='mt-10  w-full border shadow-1xl rounded-md'>
-          <UserList/>
+        <div className='mt-10  w-full bg-neutral-100 shadow-1xl rounded-md'>
+         <div className='flex  justify-between capitalize text-3x p-4  '>
+            <h2 className='font-bold text-2xl'>Users</h2>
+            <button className='bg-primary-500 p-3 text-white capitalize rounded-xl text-xl'>add user</button>
         </div>
+        </div>
+      <div className='mt-10'>
+        <div className=''><UserList/></div>
+      </div>
+        
     </div>
   )
 }

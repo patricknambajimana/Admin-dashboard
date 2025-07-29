@@ -10,7 +10,7 @@ export const ProductProvider = ({ children }) => {
       date: 'dec 10-2026',
       category: 'Electronics',
       stock: 20,
-      status:'instock'
+      status:'in stock'
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export const ProductProvider = ({ children }) => {
       date: 'april 7-2025',
       category: 'Shoes',
       stock: 0,
-      status:'Outstock'
+      status:'out of stock'
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export const ProductProvider = ({ children }) => {
       date: 'april 7-2025',
       category: 'Accessories',
       stock: 3,
-      status:'lowStock'
+      status:'low stock'
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ export const ProductProvider = ({ children }) => {
       date: 'april 7-2025',
       category: 'Accessories',
       stock: 3,
-      status:'lowStock'
+      status:'low Stock'
     },
   ]);
 
