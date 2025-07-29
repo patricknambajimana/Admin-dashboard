@@ -1,9 +1,10 @@
 import React from 'react'
 import { useContext } from 'react'
-import { themeContext } from '../context/ThemeContext'
+import {ThemeContext} from "../context/ThemeContext"
+
 
 export const useTheme =()=>{
-    const theme =useContext(themeContext)
+    const theme =useContext(ThemeContext)
 
     if(!theme){
         throw new Error ("this is not theme ")
