@@ -9,7 +9,7 @@ import { useTheme } from '../hooks/useTheme';
  const Dashboard =()=> {
  const {theme} = useTheme()   
   return (
-    <div className={` w-full pl-80 pt-30 pr-10 ${theme === "light" ? "bg-white text-black"
+    <div className={` overflow-hidden md:w-full md:pl-80 md:pt-30 md:pr-10 p-6 pt-20 ${theme === "light" ? "bg-white text-black"
                     : "bg-neutral-900 text-white"
                 } md:top-30 items-center text-center justify-between `}>
         <div className='bg-primary-500 w-full rounded-2xl'>
