@@ -10,7 +10,8 @@ const UserList = () => {
     <div className={`${theme === "light" ? "bg-white text-black"
                     : "bg-gray-800 text-white"
                 }` }>
-          <table className='w-full  overflow-x-auto table-wrapper'>
+                  <div className='overflow-x-auto'>
+          <table className='w-full table-wrapper rounded-md p-3'>
      
         <thead > 
           <tr className='bg-gray-300/20  text uppercase text-left whitespace-nowrap'>
@@ -66,6 +67,7 @@ const UserList = () => {
           })}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
