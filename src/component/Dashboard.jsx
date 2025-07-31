@@ -1,7 +1,6 @@
 import React from "react";
 import { CircleCheckBig, Package } from "lucide-react";
-
-import { Total } from "./state/Total";
+import { Total } from "./totalComponent/Total";
 import { RecentProduct } from "./RecentProduct";
 import UserList from "./UserList";
 import { useTheme } from "../hooks/useTheme";

@@ -7,7 +7,7 @@ export const useProduct = () => {
     const useProducts = useContext(ProductsContext)
 
     if (!useProduct){
-    throw new Error(" useUser must be used within a UserProvider");
+    throw new Error(" useUser must be used within a ProductProvider");
   }
     return useProducts
 }

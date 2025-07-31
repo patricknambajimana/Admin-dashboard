@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Package,
   Laptop,
@@ -92,9 +91,7 @@ const AsideBar = () => {
           <span>
             <LogOut className=" size-7 " />
           </span>
-          <button className="capitalize md:block hidden">
-            logout
-          </button>
+          <button className="capitalize md:block hidden">logout</button>
         </div>
       </div>
     </div>
