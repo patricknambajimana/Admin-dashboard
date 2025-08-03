@@ -1,24 +1,29 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-export const LoginContext = createContext();
+const LoginContext = createContext();
 
 export const LoginProvider = ({ children }) => {
-  const [userrole, setUserrole] = useState(null);
-  
-      useEffect(()=>{
-        const saveUser = JSON.parse("role",localStorage.getItem(userrole))
+  const [user, setUser] = useState(null);
 
-       if(role="admin"){
-         setUserrole(saveUser)
-       }
-       if(role="user"){
-        setUserrole(saveUser)
-       }
-  },[])
+  const login = ({ email, password }) => {
+    if (email === "admin@gmail.com" && password === "admin123") {
+      setUser({ email, role: "admin" });
+      return { success: true, role: "admin" };
+    } else if (email === "user@gmail.com" && password === "user123") {
+      setUser({ email, role: "user" });
+      return { success: true, role: "user" };
+    } else {
+      return { success: false, message: "Invalid credentials" };
+    }
+  };
+
+  const logout = () => setUser(null);
 
   return (
-    <LoginContext.Provider value={{ userrole, setUserrole}}>
+    <LoginContext.Provider value={{ user, login, logout }}>
       {children}
     </LoginContext.Provider>
   );
 };
+
+export const useAuth = () => useContext(LoginContext);

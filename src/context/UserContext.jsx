@@ -3,7 +3,7 @@ import { useState } from "react";
  export const UserContext = createContext()
 
 export const UserProvider=({children})=>{
-      const[user,setUser]= useState([ 
+      const[User,setUser]= useState([ 
        {email:'patricknambajimana@gmail.com',username: 'patrick nambajimana',role:'admin',status:"active" ,lastlogin:"2 minutes ago"},
        { email:'jhondoe@gmail.com', username: 'jhon habakuki',role:'manager',status:"active",lastlogin:"5 minutes ago"},
        { email:'aalice@gmail.com', username: 'Charlie jean',role:'staff',status:"active",lastlogin:"5 minutes ago"},
@@ -12,13 +12,8 @@ export const UserProvider=({children})=>{
            
     ]);
 
-    const stored =()=>{
-        useEffect(
-            
-        )
-    }
     return(
-        <UserContext.Provider value={{user,setUser}}>
+        <UserContext.Provider value={{User,setUser}}>
             {children}
         </UserContext.Provider>
     )

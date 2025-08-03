@@ -3,7 +3,7 @@ import { useUser } from '../hooks/useUser';
 import { User } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 const UserList = () => {
-  const { user } = useUser();
+  const { User } = useUser();
   const {theme} = useTheme() 
 
   return (
@@ -23,7 +23,7 @@ const UserList = () => {
           </tr>
         </thead>
         <tbody className='divide-y'>
-          {user.map((user, index) => {
+          {User.map((user, index) => {
             let roleClass = '';
             if (user.role === 'admin') {
               roleClass = 'text-purple-600  bg-purple-600/20 rounded-full';

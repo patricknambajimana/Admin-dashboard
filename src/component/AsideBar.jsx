@@ -10,12 +10,15 @@ import {
 import { useProduct } from "../hooks/useProduct";
 import { useUser } from "../hooks/useUser";
 import { useTheme } from "../hooks/useTheme";
+import { useAuth } from "../context/LoginContext";
+
 const AsideBar = () => {
+  const {user}=useAuth()
   const { products } = useProduct();
-  const { user } = useUser();
+  const { User } = useUser();
   const { theme } = useTheme();
 
-  const totalUser = user.length;
+  const totalUser = User.length;
   const totalproduct = products.length;
   const totalAssigned = products.filter((product) => product.stock > 0).length;
 
