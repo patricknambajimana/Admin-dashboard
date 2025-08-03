@@ -4,10 +4,11 @@ import { UserProvider } from './context/UserContext';
 import { ProductProvider } from './context/ProductsContext';
 import './index.css'
 import App from './App.jsx'
-import { ThemeContext, ThemeProvider } from './context/ThemeContext.jsx';
+import {ThemeProvider } from './context/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    
     <ThemeProvider>
     <UserProvider>
     <ProductProvider>
@@ -15,5 +16,6 @@ createRoot(document.getElementById('root')).render(
     </ProductProvider>
     </UserProvider>
     </ThemeProvider>
+   
   </StrictMode>,
 )

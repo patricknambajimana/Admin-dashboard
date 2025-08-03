@@ -1,7 +1,4 @@
 import "./App.css";
-import AsideBar from "./component/AsideBar";
-import NavBar from "./component/NavBar";
-import Dashboard from "./component/Dashboard";
 import { useTheme } from "./hooks/useTheme";
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes/AppRoutes";
@@ -14,9 +11,6 @@ function App() {
       }`}>
       <BrowserRouter>
         <AppRoutes />
-        <AsideBar />
-        <NavBar />
-        <Dashboard />
       </BrowserRouter>
     </div>
   );
