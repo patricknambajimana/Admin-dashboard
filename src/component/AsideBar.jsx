@@ -92,8 +92,8 @@ const AsideBar = () => {
           </div>
         </div>
         <Link to="/Login">
-          <div className="relative left-80  md:left-5 size-15 pt-5 pl-4 md:rounded-md rounded-full bottom-30 md:top-70 md:bg-primary-200 bg-primary-200  flex">
-            <span>
+          <div className="relative left-80  md:left-5 size-15 pt-5 pl-4 md:rounded-md rounded-full bottom-30 md:top-70 md:bg-primary-200 bg-primary-200 w-30 flex">
+            <span className="">
               <LogOut className=" size-7 " />
             </span>
             <button className="capitalize md:block hidden">logout</button>

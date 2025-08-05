@@ -1,8 +1,9 @@
 import React from "react";
 import { useProduct } from ".../../../hooks/useProduct";
-
- const ProductPage = () => {
+import { useTheme } from "../hooks/useTheme";
+const ProductPage = () => {
   const { products } = useProduct();
+  const { theme } = useTheme();
 
   const getStatusClasses = (status) => {
     switch (status) {
@@ -20,7 +21,11 @@ import { useProduct } from ".../../../hooks/useProduct";
   return (
     <div className="md:grid md:grid-cols-3 md:gap-3 md:p-10 space-y-4">
       {products.map((product, index) => (
-        <div key={index} className="border border-gray-300/40 rounded-2xl p-4 ">
+        <div
+          key={index}
+          className={`border border-gray-300/40 rounded-2xl p-4 ${
+            theme === "light" ? "bg-white text-black" : "bg-gray-800 text-white"
+          } `}>
           <div className="flex justify-between text-left">
             <p className="text-2xl">{product.name}</p>
             <span
@@ -39,4 +44,4 @@ import { useProduct } from ".../../../hooks/useProduct";
     </div>
   );
 };
-export default ProductPage
+export default ProductPage;
