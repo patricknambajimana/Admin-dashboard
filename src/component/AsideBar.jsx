@@ -6,14 +6,14 @@ import {
   Layers,
   LogOut,
   User,
+  Import,
 } from "lucide-react";
 import { useProduct } from "../hooks/useProduct";
 import { useUser } from "../hooks/useUser";
 import { useTheme } from "../hooks/useTheme";
-import { useAuth } from "../context/LoginContext";
+import { Link } from "react-router-dom";
 
 const AsideBar = () => {
-  const {user}=useAuth()
   const { products } = useProduct();
   const { User } = useUser();
   const { theme } = useTheme();
@@ -38,38 +38,39 @@ const AsideBar = () => {
           </div>
         </div>
         <div className="md:grid md:grid-cols-1 md:pl-10 flex capitalize text-sm font-extrabold">
-          <div className="flex md:gap-2  md:space-y-2 mb-3 hover:text-primary-500 hover:bg-primary-200/30 bg-primary-200/30 text-primary-500 text-1xl md:mr-10 md:p-3 p-3  rounded-md">
-            <Laptop className="md:size-7 size-6" />
-            <a href="" className="md:flex hidden ">
-              <span className="">dashboard</span>
-            </a>
-          </div>
-          <div className="flex space-y-2 justify-between hover:text-primary-500 hover:bg-primary-200/30 mr-10 p-3 rounded-md text-1xl">
-            <div className="flex">
-              <Users className="md:size-7 size-6" />
-              <a href="" className="md:flex hidden">
+          <Link to="dashboard">
+            <div className="flex md:gap-2  md:space-y-2 mb-3 hover:text-primary-500 hover:bg-primary-200/30 bg-primary-200/30 text-primary-500 text-1xl md:mr-10 md:p-3 p-3  rounded-md">
+              <Laptop className="md:size-7 size-6" />
+              Dashboard
+            </div>
+          </Link>
+          <Link to="user">
+            <div className="flex space-y-2 justify-between hover:text-primary-500 hover:bg-primary-200/30 mr-10 p-3 rounded-md text-1xl">
+              <div className="flex">
+                <Users className="md:size-7 size-6" />
                 users
-              </a>
+              </div>
+
+              <div>
+                <span className="bg-gray-200 p-2 text-sm md:flex hidden rounded-2xl text-black">
+                  {totalUser}
+                </span>
+              </div>
             </div>
-            <div>
-              <span className="bg-gray-200 p-2 text-sm md:flex hidden rounded-2xl text-black">
-                {totalUser}
-              </span>
-            </div>
-          </div>
-          <div className="flex space-y-2 text-1xl justify-between hover:text-primary-500 hover:bg-primary-200/30 mr-10 p-3 rounded-md">
-            <div className="flex">
-              <Package className="md:size-7 size-6" />
-              <a href="" className="md:flex hidden">
+          </Link>
+          <Link to="Product">
+            <div className="flex space-y-2 text-1xl justify-between hover:text-primary-500 hover:bg-primary-200/30 mr-10 p-3 rounded-md">
+              <div className="flex">
+                <Package className="md:size-7 size-6" />
                 products
-              </a>
+              </div>
+              <div>
+                <span className="bg-gray-200 p-2 md:flex hidden rounded-2xl text-black text-sm">
+                  {totalproduct}
+                </span>
+              </div>
             </div>
-            <div>
-              <span className="bg-gray-200 p-2 md:flex hidden rounded-2xl text-black text-sm">
-                {totalproduct}
-              </span>
-            </div>
-          </div>
+          </Link>
           <div className="flex space-y-2 text-1xl justify-between hover:text-primary-500 hover:bg-primary-200/30 mr-10 p-3 rounded-md">
             <div className="flex">
               <AlignCenter className="md:size-7 size-6" />
@@ -85,17 +86,19 @@ const AsideBar = () => {
           </div>
           <div className="flex   hover:text-primary-500 hover:bg-primary-200/30 p-3 rounded-md">
             <Layers className="md:size-7 size-6 " />
-            <a href="" className="md:flex hidden">
+            <Link to="Category" className="md:flex hidden">
               categories
-            </a>
+            </Link>
           </div>
         </div>
-        <div className="relative left-80  md:left-5 size-15 pt-5 pl-4 md:rounded-md rounded-full md:bg-primary-50 bg-primary-200 bottom-30 md:top-70 flex">
-          <span>
-            <LogOut className=" size-7 " />
-          </span>
-          <button className="capitalize md:block hidden">logout</button>
-        </div>
+        <Link to="/Login">
+          <div className="relative left-80  md:left-5 size-15 pt-5 pl-4 md:rounded-md rounded-full bottom-30 md:top-70 md:bg-primary-200 bg-primary-200  flex">
+            <span>
+              <LogOut className=" size-7 " />
+            </span>
+            <button className="capitalize md:block hidden">logout</button>
+          </div>
+        </Link>
       </div>
     </div>
   );

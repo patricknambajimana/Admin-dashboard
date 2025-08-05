@@ -1,9 +1,8 @@
-import React from 'react';
 import { useUser } from '../hooks/useUser';
-import { User } from 'lucide-react';
+import { Users as UserIcon } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 const UserList = () => {
-  const { User } = useUser();
+  const {User} = useUser();
   const {theme} = useTheme() 
 
   return (
@@ -41,7 +40,7 @@ const UserList = () => {
             return (
               <tr key={index} className="text-left  border-b border-gray-600/20">
                 <td className='flex items-center justify-start gap-2 p-3 whitespace-nowrap'>
-                  <User className='size-10 bg-neutral-200 rounded-full px-2' />
+                  <UserIcon className='size-10 bg-neutral-200 rounded-full px-2' />
                   <span className='flex flex-col gap-2 items-start'>
                     <h2 className='text-xl font-bold capitalize px-2'>{user.username}</h2>
                     <h2 className='text-1xl font-light capitalize px-2'>{user.email}</h2>

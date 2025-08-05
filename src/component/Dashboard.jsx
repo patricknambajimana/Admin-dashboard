@@ -9,7 +9,7 @@ const Dashboard = () => {
   const { theme } = useTheme();
   return (
     <div
-      className={`md:w-full  md:pl-80 md:pt-30 md:pr-10 p-2 ${
+      className={`md:w-full md:pr-10 p-2 ${
         theme === "light" ? "bg-white text-black" : "bg-neutral-900 text-white"
       } md:top-30 items-center text-center justify-between `}>
       <div className="bg-primary-500 w-full md:w-full rounded-2xl">

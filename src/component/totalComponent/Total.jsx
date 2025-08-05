@@ -6,10 +6,10 @@ import { useTheme } from "../../hooks/useTheme";
 
 export const Total = () => {
   const { products } = useProduct();
-  const { user } = useUser();
+  const { User } = useUser();
   const { theme } = useTheme();
 
-  const totalUser = user.length;
+  const totalUser = User.length;
   const totalproduct = products.length;
   const totalAssigned = products.filter((product) => product.stock > 0).length;
   const totalUnassigned = products.filter(

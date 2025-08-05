@@ -18,7 +18,7 @@ export const RecentProduct = () => {
   };
 
   return (
-    <div className="md:grid md:grid-cols-3 md:gap-3 md:p-10 space-y-4">
+    <div className='md:grid md:grid-cols-3 md:gap-3 md:p-10 space-y-4 '>
       {products.map((product, index) => (
         <div key={index} className="border border-gray-300/40 rounded-2xl p-4">
           <div className="flex justify-between text-left">
