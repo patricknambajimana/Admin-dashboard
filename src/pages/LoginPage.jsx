@@ -58,7 +58,7 @@ const LoginPage = () => {
     if (matchedUser.role === "admin") {
       navigate("/adminPage");
     } else {
-      navigate("/userPage");
+      navigate("/ErrorPage");
     }
   };
 
@@ -66,7 +66,9 @@ const LoginPage = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="p-5 text-2xl capitalize shadow-xl rounded-2xl max-w-md bg-white">
         <form className="space-y-4" onSubmit={handleForm}>
-          <h2 className="text-center text-primary-500 uppercase">Login to <span className="lowercase">i</span>huza</h2>
+          <h2 className="text-center text-primary-500 uppercase">
+            Login to <span className="lowercase">i</span>huza
+          </h2>
 
           {error.general && (
             <p className="text-red-500 text-sm text-center">{error.general}</p>
